@@ -1,0 +1,6 @@
+[Core]
+Name = ZABBIX
+Module = zabbix
+
+[Documentation]
+Description = An Err plugin to show OSBS builds via zabbix
