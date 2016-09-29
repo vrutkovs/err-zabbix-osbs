@@ -12,6 +12,14 @@ class Zabbix(BotPlugin):
         'prod': {
             '160728': "name",
             '160731': "phase"
+        },
+        'osd-qa': {
+            '157192': "name",
+            '157195': "phase"
+        },
+        'osd': {
+            '188519': "name",
+            '188522': "phase"
         }
     }
 
