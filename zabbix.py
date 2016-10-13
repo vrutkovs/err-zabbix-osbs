@@ -67,4 +67,4 @@ class Zabbix(BotPlugin):
         super().activate()
         for host in self.itemids.keys():
             self.last_message[host] = ''
-        self.start_poller(30, self.get_zabbix_news)
+        self.start_poller(10, self.get_zabbix_news)
