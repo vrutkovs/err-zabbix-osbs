@@ -39,7 +39,6 @@ class Zabbix(BotPlugin):
            'ROOM' not in self.config.keys():
             return
 
-        logging.info("[ZABBIX] fetching zabbix data")
         self.zapi = ZabbixAPI(self.config['URL'])
         self.zapi.login(self.config['USER'], self.config['PASSWORD'])
 
@@ -61,7 +60,7 @@ class Zabbix(BotPlugin):
                 self.last_message[host] = message
 
                 room = self.query_room(self.config['ROOM'])
-                logging.info("[ZABBIX] sending to room %s" % room)
+                logging.info("[ZABBIX] sending '%s' to room %s" % (message, room))
                 self.send(room, message)
 
     def activate(self):
